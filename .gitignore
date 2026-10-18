@@ -1,0 +1,20 @@
+# Виртуальные окружения
+.venv/
+venv/
+env/
+
+# Байт-код Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Настройки IDE и редакторов
+.vscode/
+.idea/
+
+# Системный мусор (macOS / Windows)
+.DS_Store
+Thumbs.db
+
+# Секреты (если вдруг будете использовать)
+.env
