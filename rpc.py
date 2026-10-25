@@ -11,10 +11,14 @@ choises = ["камень", "ножницы", "бумага"]
 rounds = int(input("Введите количество раундов: "))
 user_star: int = 0
 pc_star: int = 0
+user_choise: str = ()
 
 for round in range(rounds):
     pc_choise = (random.choice(choises))
-    user_choise = input("Введите камень, ножницы или бумага: ").lower().strip()
+    user_choise = input("Введите камень/ножницы/бумага: ").lower().strip()
+    while user_choise not in choises:
+        user_choise = input("Некорректно, введите камень/ножницы/бумага: ").lower().strip()
+
     if user_choise == pc_choise: 
         print(f"Компьютер тоже выбрал: {pc_choise} -> 0 баллов") 
         continue
