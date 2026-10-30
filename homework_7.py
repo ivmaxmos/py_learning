@@ -9,32 +9,31 @@
 #     print ()
 #     b += 1
 
-from typing import Literal
+#from typing import Literal
 
-def calculate (a: float, b: float, operator: Literal["/", "*", "-", "+"]):
-    """ Математическая операция над 2 числами """
-    match operator:
-        case "/": 
-            if b == 0: return "Ошибка, дел на 0"
-            else: return a / b
-        case "*": 
-            return a * b
-        case "-": 
-            return a - b
-        case "+": 
-            return a + b
-        case _:
-            return "Ошибка"
-
-print(calculate (11, 0, "/"))
+#def calculate (a: float, b: float, operator: Literal["/", "*", "-", "+"]):
+#    """ Математическая операция над 2 числами """
+#    match operator:
+#        case "/": 
+#            if b == 0: return "Ошибка, дел на 0"
+#            else: return a / b
+#        case "*": 
+#            return a * b
+#        case "-": 
+#            return a - b
+#        case "+": 
+#            return a + b
+#        case _:
+#            return "Ошибка"
+#
+#print(calculate (11, 0, "/"))
 
 
 #Генератор паролей
 import random
 import string
 
-def gen_pass (lenght:int = 4):
-    password = ""
+def gen_pass (lengts:int):
     all_chars = (string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation)
     password_chars: list[str] = []
     user_input = input("Введите длину пароля: ")
@@ -46,5 +45,5 @@ def gen_pass (lenght:int = 4):
     return "".join(password_chars) 
 
 
-print(gen_pass ())
+print(gen_pass (19))
 
