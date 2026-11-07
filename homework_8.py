@@ -1,7 +1,7 @@
 #Генератор паролей
 import random
 import string
-passwords = {}
+passwords: dict[str, str] = {}
 
 def show_menu ():
     print ("1 - Показать пароли.") 
@@ -52,7 +52,14 @@ def add_password ():
         show_menu()
 
 def show_passwords ():
-    print(passwords)
+    if passwords:
+        print("Логин: ".ljust(20), "|", "Пароль: ")
+        for key, value in passwords.items():
+            print("--"*30)
+            print(key.ljust(20), "|", value)
+    else:
+        print("Нет записанных паролей!" )
+    print("\n\n")
     show_menu()
 
 def delete_password ():
